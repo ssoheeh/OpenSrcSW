@@ -1,5 +1,8 @@
 package simpleIR;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -11,7 +14,7 @@ public class kuir {
 
 		makeCollection mc = new makeCollection();
 		makeKeyword mk = new makeKeyword();
-
+		indexer idex = new indexer();
 		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 		Document doc = docBuilder.newDocument();
@@ -23,7 +26,13 @@ public class kuir {
 		else if(args[0].equals("-k")) {
 			doc = mk.kkma(filePath);
 			mc.makeXML("index", doc);
+		} 
+		else if(args[0].equals("-i")) { 
+			HashMap<String, ArrayList<String>> map = idex.makeInvertedFile(filePath);
+			idex.makePost("index", map); 
+			idex.readPost("index");
 		}
+
 
 
 	}
