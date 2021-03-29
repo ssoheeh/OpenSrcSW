@@ -3,6 +3,8 @@ package simpleIR;
 import java.io.File;
 import java.io.StringReader;
 import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -14,6 +16,7 @@ import org.w3c.dom.Element;
 import org.xml.sax.InputSource;
 
 public class makeKeyword {
+
 	Document kkma(String fileName) throws Exception{
 		String[] food = {"떡","라면","아이스크림","초밥","파스타"};
 		File file = new File(fileName);
@@ -33,7 +36,12 @@ public class makeKeyword {
 			KeywordList kl = ke.extractKeyword(st, true);
 			for (int j = 0; j < kl.size(); j++) {
 				Keyword kwrd = kl.get(j);
-				sb.append("#"+kwrd.getString()+kwrd.getCnt());
+				if (i != kl.size() - 1){
+					sb.append(kwrd.getString()+":"+kwrd.getCnt()+"#");
+
+				}else{
+					sb.append(kwrd.getString()+":"+kwrd.getCnt());
+				}
 			}
 			index[i] = sb.toString();
 			sb.delete(0, sb.toString().length());
@@ -58,4 +66,7 @@ public class makeKeyword {
 		return doc;
 
 	}
+
+
+
 }
