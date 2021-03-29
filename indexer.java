@@ -69,7 +69,6 @@ public class indexer {
 						list[i] = cnt;
 						documentMap.put(arr[0], list);
 					}
-
 				}
 			}	
 
