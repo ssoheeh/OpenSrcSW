@@ -39,7 +39,7 @@ public class searcher {
 						wq[i] = map.get(key);
 						int idx = value.indexOf(Integer.toString(i));
 						q[i] = Double.parseDouble(value.get(idx+1));
-						id[i] += wq[i]*q[i];;
+						id[i] += wq[i]*q[i];
 					}
 						
 				}
