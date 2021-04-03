@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -47,6 +49,33 @@ public class searcher {
 		for (int i = 0; i < 5; i++) {
 			id[i] = Math.round(id[i]*100)/100.0;
 			System.out.println(id[i]);
+		}
+		double[] title = new double[5];
+		for (int i = 0; i < title.length; i++) {
+			title[i] = id[i];
+		}
+		Arrays.sort(title);
+		String[] top3 = new String[3];
+		int a = 0;
+		for (int i = 4; i >= 0; i--) {
+			for (int j = 0; j < 5; j++) {
+				if(a==3)
+					break;
+				if(title[i]==id[j]) {
+					if(!food[j].equals("")) {
+						top3[a] = food[j];
+						food[j] = "";
+						if(a<=2) {
+							a++;}
+						}
+					}
+				
+			}
+			if(a==3)
+				break;
+		}
+		for (int i = 0; i < top3.length; i++) {
+			System.out.println(top3[i]);
 		}
 	}
 	
