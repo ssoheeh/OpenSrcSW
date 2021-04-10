@@ -14,7 +14,7 @@ import org.snu.ids.kkma.index.KeywordExtractor;
 import org.snu.ids.kkma.index.KeywordList;
 
 public class searcher {
-	void getSimilarity(String filePath, String query) throws Exception {
+	void CalcSim(String filePath, String query) throws Exception {
 		String[] food = {"떡","라면","아이스크림","초밥","파스타"};
 		File file = new File(filePath+"\\index.post");
 		HashMap<String, Integer> map = new HashMap<String, Integer>();
