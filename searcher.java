@@ -26,6 +26,7 @@ public class searcher {
         Iterator<String> it = hashMap.keySet().iterator();
         double v1,v2;
         double[] id = new double[5];
+        double[] result = new double[5];
         while(it.hasNext()) {
             v1 = 0; v2 = 0;
             String key = it.next();
@@ -41,7 +42,8 @@ public class searcher {
                         q[i] = Double.parseDouble(value.get(idx+1));
                         v1 += Math.pow(wq[i],2);
                         v2 += Math.pow(q[i],2);
-                        id[i] = Math.sqrt(v1)*Math.sqrt(v2);
+                        id[i] += wq[i]*q[i];
+                        result[i] = id[i]/(Math.sqrt(v1)*Math.sqrt(v2));
                     }
 
                 }
@@ -50,12 +52,12 @@ public class searcher {
 
         }
         for (int i = 0; i < 5; i++) {
-            id[i] = Math.round(id[i]*100)/100.0;
-            System.out.println(id[i]);
+            result[i] = Math.round(result[i]*100)/100.0;
+            System.out.println(result[i]);
         }
         double[] title = new double[5];
         for (int i = 0; i < title.length; i++) {
-            title[i] = id[i];
+            title[i] = result[i];
         }
         Arrays.sort(title);
         String[] top3 = new String[3];
@@ -64,7 +66,7 @@ public class searcher {
             for (int j = 0; j < 5; j++) {
                 if(a==3)
                     break;
-                if(title[i]==id[j]) {
+                if(title[i]==result[j]) {
                     if(!food[j].equals("")) {
                         top3[a] = food[j];
                         food[j] = "";
