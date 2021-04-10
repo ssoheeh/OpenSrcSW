@@ -26,11 +26,12 @@ public class searcher {
         }
         HashMap hashMap = readPost(filePath);
         Iterator<String> it = hashMap.keySet().iterator();
-        double v1,v2;
+        double v1=0,v2;
+        double ans=0;
         double[] id = new double[5];
         double[] result = new double[5];
         while(it.hasNext()) {
-            v1 = 0; v2 = 0;
+            v2 = 0;
             String key = it.next();
             ArrayList<String> value = (ArrayList<String>)hashMap.get(key);
             int[] wq = new int[5];
@@ -45,9 +46,9 @@ public class searcher {
                         v1 += Math.pow(wq[i],2);
                         v2 += Math.pow(q[i],2);
                         id[i] += wq[i]*q[i];
-                        result[i] = id[i]/(Math.sqrt(v1)*Math.sqrt(v2));
+                        ans += v2;
+                        result[i] = id[i]/(Math.sqrt(v1)*Math.sqrt(ans));
                     }
-
                 }
 
             }
