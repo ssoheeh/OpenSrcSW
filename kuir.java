@@ -1,4 +1,3 @@
-package simpleIR;
 
 import java.util.ArrayList;
 import java.util.HashMap;
