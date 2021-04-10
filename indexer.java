@@ -1,36 +1,13 @@
-package simpleIR;
+import org.w3c.dom.Document;
+import org.xml.sax.InputSource;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.StringReader;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.*;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map.Entry;
-import java.util.Set;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-
-import org.snu.ids.kkma.index.Keyword;
-import org.snu.ids.kkma.index.KeywordExtractor;
-import org.snu.ids.kkma.index.KeywordList;
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
-
-
-
 
 public class indexer {
 	HashMap<String, ArrayList<String>> makeInvertedFile(String filePath) throws Exception {
@@ -44,7 +21,7 @@ public class indexer {
 		//String으로 변환
 		String str = Files.readString(file.toPath());
 		StringBuffer sb = new StringBuffer(); 
-		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); 
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
 		InputSource is = new InputSource();
 		is.setCharacterStream(new StringReader(str));
