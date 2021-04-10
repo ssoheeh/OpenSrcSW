@@ -41,10 +41,11 @@ public class searcher {
                         q[i] = Double.parseDouble(value.get(idx+1));
                         v1 += Math.pow(wq[i],2);
                         v2 += Math.pow(q[i],2);
+                        id[i] = Math.sqrt(v1)*Math.sqrt(v2);
                     }
 
                 }
-                
+
             }
 
         }
