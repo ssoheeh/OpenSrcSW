@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb83052-8cff-4d20-860a-192c715900b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OpenSrcSW.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/searcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/indexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kuir.java" beforeDir="false" afterPath="$PROJECT_DIR$/kuir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/makeCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/makeCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/makeKeyword.java" beforeDir="false" afterPath="$PROJECT_DIR$/makeKeyword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/searcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +34,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -54,6 +46,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="kuir" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="PROGRAM_PARAMETERS" value="-s &quot;C:\Users\PC\OneDrive\바탕 화면\오픈SW\index.post&quot; -q &quot;라면에는 면, 분말스프가 있다.&quot;" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
