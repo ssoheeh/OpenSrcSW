@@ -15,6 +15,7 @@ public class kuir {
 		makeCollection mc = new makeCollection();
 		makeKeyword mk = new makeKeyword();
 		indexer idex = new indexer();
+		searcher search = new searcher();
 		DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
 		Document doc = docBuilder.newDocument();
@@ -31,6 +32,9 @@ public class kuir {
 			HashMap<String, ArrayList<String>> map = idex.makeInvertedFile(filePath);
 			idex.makePost("index", map); 
 			idex.readPost("index");
+		}else if(args[0].equals("-s")) { 
+			if(args[2].equals("-q"))
+				search.CalcSim(filePath,args[3]);
 		}
 
 
